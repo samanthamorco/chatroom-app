@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: message-app_development
+  database: chatroom-app_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: message-app
+  #username: chatroom-app
 
   # The password associated with the postgres role (username).
   #password:
@@ -50,14 +50,14 @@ development:
   #   debug5, debug4, debug3, debug2, debug1,
   #   log, notice, warning, error, fatal, and panic
   # Defaults to warning.
-  #min_messages: notice
+  #min_chatrooms: notice
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: message-app_test
+  database: chatroom-app_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: message-app_production
-  username: message-app
-  password: <%= ENV['MESSAGE-APP_DATABASE_PASSWORD'] %>
+  database: chatroom-app_production
+  username: chatroom-app
+  password: <%= ENV['CHATROOM-APP_DATABASE_PASSWORD'] %>
