@@ -7,7 +7,8 @@ class Api::V1::MessagesController < ApplicationController
   def create
     @message = Message.create(
       body: params[:body],
-      user_id: params[:user_id]
+      user_id: params[:user_id],
+      chatroom_id: params[:chatroom_id]
     )
     render "show.json.jbuilder"
   end

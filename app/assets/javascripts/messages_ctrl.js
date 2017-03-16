@@ -8,10 +8,11 @@
       });
     };
 
-    $scope.createNewMessage = function(body, currentUserId) {
+    $scope.createNewMessage = function(body, currentUserId, chatroomId) {
       var params = {
         body: body,
-        user_id: currentUserId
+        user_id: currentUserId,
+        chatroom_id: chatroomId
       };
       $http.post("/api/v1/messages.json", params).then(function(response) {
         $scope.messages.push(response.data);
